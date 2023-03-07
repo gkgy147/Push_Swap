@@ -6,7 +6,7 @@
 /*   By: grobert <grobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 21:43:04 by grobert           #+#    #+#             */
-/*   Updated: 2023/03/07 21:53:39 by grobert          ###   ########.fr       */
+/*   Updated: 2023/03/07 23:59:07 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void    naive_sort(t_stack *a, t_stack *b)
     while (!is_sorted(*a))
     {
         i = 0;
-        index = get_elem_index(*a, get_min(a))
+        index = get_elem_index(*a, get_min(a));
         if (index == -1)
                 return ;
         if (index <= a->size / 2)

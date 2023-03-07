@@ -6,7 +6,7 @@
 /*   By: grobert <grobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 09:57:05 by grobert           #+#    #+#             */
-/*   Updated: 2023/03/06 09:59:50 by grobert          ###   ########.fr       */
+/*   Updated: 2023/03/07 23:44:08 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ t_node  *new_elem(int data)
         return (NULL);
     new->data = data;
     new->above = NULL;
-    new->below = NULL;
+    new->bellow = NULL;
     return (new);
 }

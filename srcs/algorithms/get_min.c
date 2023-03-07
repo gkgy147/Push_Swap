@@ -6,7 +6,7 @@
 /*   By: grobert <grobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 16:16:25 by grobert           #+#    #+#             */
-/*   Updated: 2023/03/06 16:29:15 by grobert          ###   ########.fr       */
+/*   Updated: 2023/03/07 23:59:39 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int     get_min(t_stack *stack)
 
     tmp = stack->top;
     min = tmp->data;
-    while (tmp->below)
+    while (tmp->bellow)
     {
         tmp = tmp->bellow;
         if (min > tmp->data)

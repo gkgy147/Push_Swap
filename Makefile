@@ -6,7 +6,7 @@
 #    By: grobert <grobert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/07 23:19:02 by grobert           #+#    #+#              #
-#    Updated: 2023/03/07 23:23:41 by grobert          ###   ########.fr        #
+#    Updated: 2023/03/08 00:23:52 by grobert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ OPERATION	= $(addprefix operations/, pa_push_a pb_push_b ra_rotate_a \
 CHECKS		= $(addprefix checks/, get_input is_sorted is_empty is_integer is_duplicates \
 			  is_greater_than_int put_error)
 UTILS		= $(addprefix utils/, ft_swap ft_atoi ft_strcmp ft_putstr)
-ALGO		= $(addprefix algorithm/, naive_sort chunks_sort sort_three \
+ALGO		= $(addprefix algorithms/, naive_sort chunks_sort sort_three \
 			  get_chunk_elem get_elem_index get_max get_min put_to_stack_a \
 			  put_chunk_elems)
 FILES		= $(addprefix srcs/, push_swap $(STACK) $(OPERATION) $(UTILS) $(CHECKS) $(ALGO))
@@ -47,7 +47,7 @@ ifeq ($(DEBUG), 1)
    OPTS = -g
 endif
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus clean_bonus fclean_bonus test norm
 
 all: $(NAME)
 
@@ -59,6 +59,24 @@ $(NAME):  $(OBJ) $(HEADER)
 %.o: %.c $(HEADER)
 	@printf "$(CURSIVE)$(GRAY) 	- Making object file $(notdir $@) from source file $(notdir $<) ... $(RESET)\n"
 	@ $(CC) -Wall -Wextra -Werror $(OPTS) $(INCLUDES) -c $< -o $@
+
+norm:
+	@printf "$(CURSIVE)$(GRAY)"
+	@norminette
+	@printf "$(RESET)"
+
+test: all
+	@printf "\n$(YELLOW)	- Testing $(ARG) random numbers.. $(RESET)\n\n"
+	@sh testing/testing.sh $(ARG) 
+
+bonus:
+	@$(MAKE) -C checker_bonus
+clean_bonus:
+	@$(MAKE) clean -C checker_bonus
+fclean_bonus:
+	@$(MAKE) fclean -C checker_bonus
+re_bonus:
+	@$(MAKE) re -C checker_bonus
 
 clean:
 	@ $(RM) $(OBJ)

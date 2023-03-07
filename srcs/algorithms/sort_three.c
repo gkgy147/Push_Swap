@@ -6,7 +6,7 @@
 /*   By: grobert <grobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 21:16:10 by grobert           #+#    #+#             */
-/*   Updated: 2023/03/07 21:27:21 by grobert          ###   ########.fr       */
+/*   Updated: 2023/03/07 23:59:24 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void    sort_three(t_stack *a)
     {
         if (a->top->data > a->bottom->data)
         {
-            sa_swap_a(a,false)
+            sa_swap_a(a,false);
             rra_reverse_rotate_a(a, false);
         }
         else

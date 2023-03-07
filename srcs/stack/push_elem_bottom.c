@@ -6,7 +6,7 @@
 /*   By: grobert <grobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 09:50:33 by grobert           #+#    #+#             */
-/*   Updated: 2023/03/06 09:55:44 by grobert          ###   ########.fr       */
+/*   Updated: 2023/03/07 23:45:27 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ void    push_elem_bottom(t_stack *stack, t_node *elem)
     }
     else
         stack->top = elem;
-    stack->bootm = elem;
+    stack->bottom = elem;
     stack->size++;
 }

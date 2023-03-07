@@ -6,7 +6,7 @@
 /*   By: grobert <grobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 10:06:23 by grobert           #+#    #+#             */
-/*   Updated: 2023/03/06 10:58:59 by grobert          ###   ########.fr       */
+/*   Updated: 2023/03/07 23:45:09 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void    poop_elem(t_stack *stack)
         if (stack->size == 1)
         {
             stack->top = NULL;
-            stack->bottom = NULL:
+            stack->bottom = NULL;
         }
         else
-            stack->bottom->bellow = NULL:
+            stack->bottom->bellow = NULL;
         stack->size--;
         free(tmp);
     }

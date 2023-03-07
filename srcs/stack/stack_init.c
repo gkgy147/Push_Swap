@@ -6,7 +6,7 @@
 /*   By: grobert <grobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 23:09:10 by grobert           #+#    #+#             */
-/*   Updated: 2023/02/28 23:13:21 by grobert          ###   ########.fr       */
+/*   Updated: 2023/03/07 23:45:46 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_stack *stack_init(void)
     stack = malloc(sizeof(t_stack));
     if (!stack)
         return (NULL);
-    stack->top = NULL:
+    stack->top = NULL;
     stack->bottom = NULL;
     stack->size = 0;
     return (stack);        

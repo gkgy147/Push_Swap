@@ -6,7 +6,7 @@
 /*   By: grobert <grobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/06 13:06:17 by grobert           #+#    #+#             */
-/*   Updated: 2023/03/06 13:12:05 by grobert          ###   ########.fr       */
+/*   Updated: 2023/03/07 23:47:53 by grobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void    rr_ra_rb(t_stack *a, t_stack *b)
 {
     ra_rotate_a(a, true);
-    ra_rotate_b(b, true);
+    rb_rotate_b(b, true);
     ft_putstr("rr\n");
 }
